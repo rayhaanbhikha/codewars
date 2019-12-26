@@ -59,6 +59,18 @@ func Decompose(s string) []string {
 
 	return []string{}
 }
+
+func decomposeFraction(fToMatch fraction, fractions []fraction) []fraction {
+
+	n := len(fractions)
+
+	if fToMatch.isImproper() && n == 0 {
+		fractions = append(fractions, NewFraction(1, 1))
+	}
+
+	return fractions
+}
+
 func addNFractions(fractions []fraction) fraction {
 	n := len(fractions) - 1
 	fmt.Println(fractions, n)

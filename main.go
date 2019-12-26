@@ -4,9 +4,9 @@ import "fmt"
 
 func main() {
 	// Decompose("21/23")
-	fractions := []fraction{
-		fraction{1, 2}, fraction{1, 3}, fraction{1, 13}, fraction{1, 598}, fraction{1, 897},
-	}
+	// fractions := []fraction{
+	// 	fraction{1, 2}, fraction{1, 3}, fraction{1, 13}, fraction{1, 598}, fraction{1, 897},
+	// }
 
 	// fmt.Println(fractions)
 	// computedFraction := addFraction(fractions[0], fractions[1])
@@ -15,7 +15,9 @@ func main() {
 	// fmt.Println(newFractions)
 	// fmt.Println(addFraction(fractions[3], fractions[4]))
 	// fmt.Println(computeGCF(38201436, 41839668))
-	fmt.Println(addNFractions(fractions))
+	// fmt.Println(addNFractions(fractions))
+	d := make([]int, 0)
+	fmt.Println(decomposeFraction(NewFraction(21, 23), d))
 
 	// Decompose("0.66")
 	// Decompose("0.5")
