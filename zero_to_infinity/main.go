@@ -1,24 +1,19 @@
 package main
 
 func main() {
-	Going(5)
+	Going(6)
 }
 
 func Going(n int) float64 {
 
-	var currentSum float64 = 1
-	var currentBase float64 = 1
+	currentSum, currentBase := 1.0, 1.0
 
 	for i := 0; i < n-1; i++ {
 		newN := float64(n - i)
 		currentBase *= newN
-		appendVal := divide(1.0, currentBase)
+		appendVal := 1 / currentBase
 		currentSum += appendVal
 	}
-
-	return currentSum
-}
-
-func divide(x, y float64) float64 {
-	return x / y
+	v := int(currentSum * 10e5)
+	return float64(v) / 10e5
 }
