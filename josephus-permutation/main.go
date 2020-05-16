@@ -1,8 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
 	items := []interface{}{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	Josephus(items, 2)
+	fmt.Println(Josephus(items, 2))
 }
 
 func Josephus(items []interface{}, k int) []interface{} {
